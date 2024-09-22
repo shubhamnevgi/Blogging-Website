@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blogging</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  
+}
+
+body
+{
+	background-color: #abaab4;
+}
+
+h1
+{
+  font-size: 50px;
+}
+
+h2
+{
+	padding-top: 230px;
+	font-family: arial;
+}
+
+p
+{
+	font-family: sans serif;
+	font-size: 1.2em;
+	opacity: 0.7;
+}
+
+header
+{
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+
+header a
+{
+	position: absolute;
+	left: 900px;
+	top: 20px;
+	background-color: #37363c;
+	padding: 10px 10px;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+header a:hover
+{
+	color: cyan;
+}
+
+header .search-box
+{
+	border: 0px;
+	position: absolute;
+	top: 20px;
+	width: 200px;
+	height: 35px;
+	left: 1000px;
+	border-radius: 4px;
+}
+
+header .search-box i
+{
+	position: absolute;
+	left: 160px;
+	top: 8px;
+	color: black;
+	padding: 0 0;
+	opacity: 0.5;
+}
+
+header .search-box i:hover
+{
+	color: black;
+}
+
+.search-box input
+{ 
+	border: 0px;
+	background-color: white;
+	height: 100%;
+	width: 97%;
+	border-radius: 4px;
+	padding: 0 10px;
+	margin-left: 0;
+}
+
+
+
+nav-bar {
+  position: relative;
+  margin-top: 100px;
+}
+
+
+nav-bar ul 
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	background-color : #515059;
+    padding: 6px; 
+	border-radius: 4px;
+	margin-bottom: 0px;
+}
+
+nav-bar ul li
+{	
+    padding: 6px 0px;
+  	background-color : #37363c;
+	border-radius: 4px;
+}
+
+li > a
+{
+	text-decoration: none;
+	color: white;
+}
+
+li > a:hover
+{
+
+	transition: 0.3s;
+	color: cyan;
+	
+}
+
+
+ 
+hr
+{
+	padding: 4px;
+	border-radius: 5px;
+	margin-top: 10px;
+	background-color: #c4c3d1;
+	margin-bottom: 10px;
+	border: none;
+}
+
+.content1
+{ 
+	display: flex;
+	background-color: #d8d8e0;
+	height: 500px;
+}
+
+.content2
+{
+	display: flex;
+	justify-content: space-between;
+	height: 300px;
+	background-color:  #f0f0f3;
+}
+
+.content1 .side-bar1 
+{
+	position: relaive;
+	width: 35%;
+	margin-right: 0;
+}
+
+.content1 .side-bar2 
+{
+	position: relative;
+	width: 30%;
+}
+
+.content1 .side-bar3 
+{
+	position: relaive;
+	width: 35%;
+	margin-left: 0;
+}
+
+.content1 .side-bar1 img
+{
+	position: absolute;
+	top: 320px;
+	left: 100px;
+	height: 130px;
+	width: 290px;
+}
+
+.content1 .side-bar1 .img1 img
+{
+	position: absolute;
+	top: 1150px;
+	left: 100px;
+	height: 130px;
+	width: 290px;
+}
+
+.content1 .side-bar2 .row1 img
+{
+	position: absolute;
+	padding-left: 0;
+	top: 20px;
+}
+
+.content1 .side-bar2 .row1 p
+{
+	position: absolute;
+	left: 140px;
+	font-size: 1em;
+}
+
+.content1 .side-bar2 .row2 img
+{
+	position: absolute;
+	padding-left: 0;
+	top: 200px;
+}
+
+.content1 .side-bar2 .row2 p
+{
+	position: absolute;
+	left: 140px;
+	top: 180px;
+	font-size: 1em;
+}
+
+.content1 .side-bar2 .row3 img
+{
+	position: absolute;
+	padding-left: 0;
+	top: 380px;
+}
+
+.content1 .side-bar2 .row3 p
+{
+	position: absolute;
+	left: 140px;
+	font-size: 1em;
+	top: 360px;
+}
+
+.content1 .side-bar3 img
+{
+	position: absolute;
+	top: 320px;
+	left: 865px;
+	height: 130px;
+	width: 290px;
+}
+
+.content1 .side-bar3 .img1 img
+{
+	position: absolute;
+	top: 1150px;
+	left: 865px;
+	height: 130px;
+	width: 290px;
+}
+
+.content1 .side-bar3 a
+{
+	font-weight: bold;
+	margin-left: 0;
+	margin-right: 0;
+	text-decoration: none;
+	font-style: italic;
+	opacity: 1;
+}
+p > a
+{
+	color: black;
+	opacity: 1;
+}
+
+.content1 .side-bar3 a:hover
+{
+	color: cyan;
+}
+
+.content2 .intro h1
+{
+	font-size: 2.5em;
+}
+
+.content2 .intro p
+{
+	opacity: 1;
+}
+
+footer
+{
+	padding: 15px;
+	background-color : black;
+	height: 250px;
+}
+
+
+footer .footer-nav ul
+{
+	display: flex;
+	justify-content: center;	
+	list-style: none;
+}
+
+footer .footer-nav ul li
+{
+	padding: 15px 0;
+	font-size: 0.9em;
+	margin-left: 0px;
+	text-decoration: none;
+}
+
+footer p
+{
+	color: white;
+	opacity: 1;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 0px;
+}
+
+
+.fa:hover {
+	color: cyan;
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  width: 40px;
+  text-align: center;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+footer .footer-end a
+{
+	font-size: 0.9em;
+}
+
+footer .footer-end a
+{
+    margin-left: 0;
+	margin-right: 0;
+	color: white;
+	text-decoration: none;
+}
+
+footer .footer-end a:hover
+{
+	color: cyan;
+}
+
+</style>
+</head>
+<body>
+<header>
+
+<div>
+<h1>Blogging</h1>
+</div>
+
+
+
+
+
+<a href="get-started.html">Get starded</a>
+<div class="search-box">
+<input type="text" placeholder="   Google search"><i class="fa fa-search"></i>
+</div>
+</header>
+
+<nav-bar>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Nation</a></li>
+      <li><a href="#">Sports</a></li>
+	  <li><a href="#">Politics</a></li>
+      <li><a href="#">Entertainment</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+</nav-bar>
+
+<hr>
+
+<article class="content1">
+
+<div class="side-bar1">
+<img src="twitter.jpg">
+
+<h2>Should Twitter Get Rid of Follower Counts?</h2>
+<p>The possibility feels closer than ever</p>
+<h4>Cool Neha in All Things Creative</h4>
+<h5>Jan 9 · 5 min read</h5>
+</div>
+
+<div class="side-bar2">
+
+<div class="row1">
+<img src="html.jpg">
+<p>Html, a standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on WWW pages.</p>
+</div>
+
+<div class="row2">
+<img src="css.jpg">
+<p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media & control the layout of multiple web pages.</p>
+</div>
+
+<div class="row3">
+<img src="web.jpg">
+<p>Teach yourself the foundations of designing using these links made for learning.--freecodecamp & theodinproject</p>
+</div>
+</div>
+
+<div class="side-bar3">
+<img src="fast food.jpg">
+<h2>No, That’s Not How You Say It</h2>
+
+<p>A short personal history of my favorite fast food
+(<a href="read-more.html">Read more...</a>)</p>
+
+<h4>VIP Singh</h4>
+<h5>Jan 29 · 8 min read</h5>
+</div>
+
+</article>
+
+<hr>
+
+<article class="content2">
+
+<div class="intro">
+<h1>Welcome to Blogging,<br>where words matter</h1>
+<p>We'll deliever the best stories and ideas on the topics you<br>care about most straight to your homepage,app, or inbox.</p>
+</div>
+
+<img src="blog.jpg">
+
+</article>
+
+<hr>
+
+<article class="content1">
+
+<div class="side-bar1">
+<div class="img1">
+<img src="code.jpg">
+</div>
+
+<h2>A few good reasons why you should learn to code</h2>
+<p>You might be wondering if learning to code is something you should...</p>
+<h4>Rocky Jagtiani</h4>
+<h5>Jan 9 · 5 min read</h5>
+</div>
+
+<div class="side-bar2">
+
+<div class="row1">
+<img src="invest.jpg">
+<p>Only buy something that you’d be perfectly happy to hold if the market shut down for 10 years.</p>
+</div>
+
+<div class="row2">
+<img src="summer.jpg">
+<p>When I figured out how to work my grill, it was quite a moment. I discovered that summer is a completely different experience when you know how to grill.</p>
+</div>
+
+<div class="row3">
+<img src="Habits.jpg">
+<p>Chains of habit are too light to be felt until they are too heavy to be broken.</p>
+</div>
+</div>
+
+<div class="side-bar3">
+<div class="img1">
+<img src="alien.jpg">
+</div>
+
+<h2>Deep space radio waves baffle astronomers; aliens not ruled out</h2>
+
+<p>Every time we see something we’ve never seen before that is an opportu..</p>
+
+<h4>Enzyme Snehar</h4>
+<h5>Jan 29 · 8 min read</h5>
+</div>
+
+</article>
+
+<hr>
+
+<footer>
+
+<div class="footer-nav">
+    <ul>
+      <li><a href="aboutus.html">About us</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li><a href="#">Newsletter</a></li>
+	  <li><a href="#">Sitemap</a></li>
+    </ul>
+</div>
+
+<p>FOLLOW US ON</p>
+
+<div class="footer-nav">
+<ul>
+<li><a href="#" class="fa fa-facebook"></a></li>
+<li><a href="#" class="fa fa-twitter"></a></li>
+<li><a href="#" class="fa fa-google"></a></li>
+<li><a href="#" class="fa fa-rss"></a></li>
+<li><a href="#" class="fa fa-youtube"></a></li>
+ </ul>
+</div>
+
+<div class="footer-end">
+<p>Copyright © 2023
+<a href="index.html">Blogging.com</a></p>
+</div>
+
+</footer>
+
+<script>
+
+    $(document).ready(function(){
+  
+  $.ajax({
+    type: 'post',
+    url: 'count.php',
+    data: {
+      updateTotalViews: "pageViews" 
+    },
+
+    success: function(response) {
+      $('#display_div_pageViews').html(response);
+
+    }
+  });
+
+
+
+
+  $.ajax({
+    type: 'post',
+    url: 'count.php',
+    data: {
+      readTotalUsers: "usersCount" 
+    },
+
+    success: function(response) {
+      $('#display_div_usersCount').html(response);
+
+    }
+  });
+});
+
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $("body").on("contextmenu",function(e){
+              return false;
+          });
+      });
+    </script>
+</body>
+</html>

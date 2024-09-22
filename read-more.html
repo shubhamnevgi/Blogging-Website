@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blogging</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  
+}
+
+body
+{
+	background-color: #d8d8e0;
+}
+
+p
+{
+	font-family: Constantia;
+	font-size: 1em;
+	color: #515059;
+}
+
+h3
+{
+	padding-bottom: 30px;	
+}
+
+nav-bar {
+  position: relative;
+  margin-top: 100px;
+}
+
+nav-bar ul 
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	background-color : #515059;
+    padding: 6px; 
+	border-radius: 4px;
+	margin-bottom: 0px;
+}
+
+nav-bar ul li
+{	
+    padding: 6px 0px;
+  	background-color : #37363c;
+	border-radius: 4px;
+}
+
+li > a
+{
+	text-decoration: none;
+	color: white;
+}
+
+li > a:hover
+{
+
+	transition: 0.3s;
+	color: cyan;
+	
+}
+ 
+hr
+{
+	padding: 4px;
+	border-radius: 5px;
+	margin-top: 10px;
+	background-color: #c4c3d1;
+	margin-bottom: 10px;
+	border: none;
+}
+
+article
+{
+	margin: 50px;
+	margin-bottom: 0;
+}
+
+.content
+{
+	position: relative;
+	height: 450px;
+	display: flex;
+}
+
+.content img
+{
+	position: absolute;
+	left: 450px;
+}
+
+.content .voting
+{
+	display: flex;	
+	height: 500px;
+	width: 400px;
+	padding: 80px 0;
+}
+
+.content .voting .like
+{
+	height: 150px;
+	width: 100px;
+	margin-right: 0;
+}
+
+.content .voting .dislike
+{
+	height: 150px;
+	width: 100px;
+}
+
+.content .voting #likebtn
+{
+	border: none;
+	padding: 5px;
+	font-size: 30px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
+
+.content .voting #likebtn .fa-thumbs-up 
+{
+	color: green;
+}
+
+.content .voting #dislikebtn .fa-thumbs-down 
+{
+	color: red;
+}
+
+.content .voting #dislikebtn
+{
+	border: none;
+	font-size: 30px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
+
+
+
+.content .voting button
+{
+	cursor: pointer;
+}
+
+.content .voting button:active
+{
+	transform: scale(1.2);
+}
+
+.voting #likeCount, #dislikeCount{
+	margin-left: 10px;
+}
+
+footer
+{
+	padding: 15px;
+	background-color : black;
+	height: 250px;
+}
+
+
+footer .footer-nav ul
+{
+	display: flex;
+	justify-content: center;	
+	list-style: none;
+}
+
+footer .footer-nav ul li
+{
+	padding: 15px 0;
+	font-size: 0.9em;
+	margin-left: 0px;
+	text-decoration: none;
+}
+
+footer p
+{
+	color: white;
+	opacity: 1;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+footer .fa {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 0px;
+}
+
+
+
+
+.fa:hover {
+	color: cyan;
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  width: 40px;
+  text-align: center;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+footer .footer-end a
+{
+	font-size: 0.9em;
+}
+
+footer .footer-end a
+{
+    margin-left: 0;
+	margin-right: 0;
+	color: white;
+	text-decoration: none;
+}
+
+footer .footer-end a:hover
+{
+	color: cyan;
+}
+
+</style>
+</head>
+<body>
+
+<nav-bar>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Nation</a></li>
+      <li><a href="#">Sports</a></li>
+	  <li><a href="#">Politics</a></li>
+      <li><a href="#">Entertainment</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+</nav-bar>
+
+<hr>
+<article>
+<div class="content">
+<div>
+<h3>MEMBER FEATURE STORY</h3>
+
+<p>No, That’s Not How You Say It<br><br>
+A short personal history of my favorite fast food</p>
+
+  <div class="voting">  
+    <div>
+        <button id="likebtn" onclick="like()"><a class="fa fa-thumbs-up"></a></button>
+        <span id="likeCount">0</span>
+    </div>
+    <div>
+        <button id="dislikebtn" onclick="dislike()"><a class="fa fa-thumbs-down"></a></button>
+        <span id="dislikeCount">0</span>
+    </div>
+	</div>
+</div>
+
+<img src="fast food.jpg">
+
+</div>
+
+<p>
+
+Indians talk funny. We don’t think we do, but we do. We’re usually too busy talking at or over or directly through each other to notice. Every so often, though, we stop long enough to listen to one another and then laugh and point.
+<br><br>
+The middle-aged Persian woman I hired to teach me how to drive made fun of me when I mispronounced Cahuenga Boulevard. I had just moved to Mumbai a few months prior from Yamunotri, where I considered myself a native despite the disagreements of many native Mumbaikars. Frank Lloyd Wright once said, “tip the world over on its side and everything loose will land in Mumbai.” So I floated across the country — as millions before me had — to seek my fortune.
+<br><br>
+Her teaching method was an unorthodox form of politically incorrect mockery. When I tapped the brakes too hard, she’d tell me not to drive like a “Chinaman” and then pantomimed her head flinging back and forth, as if she were bowing. She casually informed me that Mumbaikars were notoriously terrible at changing lanes. Don’t get her started on Indians. Seriously, don’t. She was, to be charitable, racially insensitive.
+<br><br>
+I was a stranger in her city but my advanced age and inexperience amused her. How could a grown man not know how to drive a car? It was, however, my accent that intrigued her the most. I spoke with the faintest southern drawl but I also had northeastern motormouth tendencies. She was always drawing conclusions as to my ethnicity.
+<br><br>
+During one lesson she said, “You people are good drivers.”
+<br><br>
+You people?
+<br><br>
+“Mumbaikars.”
+<br><br>
+Because of her I passed my driver’s test, got my first license to operate a motor vehicle, and then proceeded to not drive for years. Everything I needed was in walking distance: my job and places to eat.
+<br><br>
+Here’s the truth about food in India: it’s pretty good. There’s amazing pho and pupusas and bulgogi. During my three year internment in the city of Mumbai, I was able to find satisfactory replacements for my beloved street foods. I found some decent pizza. I even found bagels that… sufficed. But I could never find the one dish that reminded me of my adopted home for the previous 16 years. A gyro platter.
+<br><br>
+I couldn’t even find a suitable Mumbai-style Greek diner, the kind of greasy spoon with a massive menu where you can order a meal of waffles, meatloaf, and lasagna if you want.
+<br><br>
+But it’s not as if Mumbai has no roast meat sandwiches. My racist — but friendly — driving instructor had once pointed out an Armenian restaurant that she recommended. This place served up delicious chicken shawarma sandwiches and a garlic sauce I could eat with my fingers.
+<br><br>
+Eventually, I would drift back to Mumbai. The first thing I would order upon my return? A gyro, a word that rhymes with “pie-whoa.”
+<br><br>
+</p>
+
+</article>
+
+<hr>
+
+<footer>
+
+<div class="footer-nav">
+    <ul>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li><a href="#">Newsletter</a></li>
+	  <li><a href="#">Sitemap</a></li>
+    </ul>
+</div>
+
+<p>FOLLOW US ON</p>
+
+<div class="footer-nav">
+<ul>
+<li><a href="#" class="fa fa-facebook"></a></li>
+<li><a href="#" class="fa fa-twitter"></a></li>
+<li><a href="#" class="fa fa-google"></a></li>
+<li><a href="#" class="fa fa-rss"></a></li>
+<li><a href="#" class="fa fa-youtube"></a></li>
+ </ul>
+</div>
+
+<div class="footer-end">
+<p>Copyright © 2023
+<a href="index.com">Blogging.com</a></p>
+</div>
+
+</footer>
+
+<script type="text/javascript">
+
+let likeCount = 0;
+let dislikeCount = 0;
+
+function like() {
+    likeCount++;
+    updateLikeCount();
+}
+
+function dislike() {
+    dislikeCount++;
+    updateDislikeCount();
+}
+
+function updateLikeCount() {
+    const likeCountElement = document.getElementById("likeCount");
+    likeCountElement.textContent = likeCount;
+}
+
+function updateDislikeCount() {
+    const dislikeCountElement = document.getElementById("dislikeCount");
+    dislikeCountElement.textContent = dislikeCount;
+}
+
+</script>
+
+</body>
